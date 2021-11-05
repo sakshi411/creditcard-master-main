@@ -1,0 +1,233 @@
+.Card {
+  width: 60%;
+  min-width: 850px;
+  height: 750px;
+  margin: auto;
+  background-color: #cce1f4;
+  display: grid;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  font-family: monospace;
+}
+
+#card-image {
+  border-radius: 20px;
+  position: absolute;
+  top: -15em;
+  right: 3em;
+  filter: brightness(55%);
+  box-shadow: -1px 9px 20px 0px white;
+}
+
+#card-chip {
+  position: absolute;
+  left: 5em;
+  top: -15em;
+  height: 4em;
+  padding: 2em;
+}
+
+#card-type-image {
+  position: absolute;
+  right: 3em;
+  top: -15em;
+  height: 4em;
+  padding: 2em;
+}
+
+#card-number {
+  position: absolute;
+  color: white;
+  right: 3.4em;
+  font-size: 2.5em;
+  top: -2em;
+}
+
+.holder-n-expires {
+  position: absolute;
+  width: 450px;
+  top: 2em;
+  right: 3em;
+  display: inline-flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.holder-n-expires label {
+  font-size: 1em;
+  color: #d2cece;
+}
+
+#card-holder {
+  padding-left: 2.8em;
+}
+
+#card-holder p {
+  margin: 0.3em 0;
+  font-size: 1.5em;
+}
+
+#card-expires {
+  padding-right: 3em;
+}
+
+#card-expires p {
+  margin: 0.3em 0;
+  font-size: 1.5em;
+}
+
+.card-form {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-field {
+  display: inline-grid;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+.form-field > input {
+  padding: 0.8em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1.2em;
+}
+.form-field > input:focus {
+  outline-color: lightskyblue;
+}
+
+.form-field .dropdown {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1.2em;
+  line-height: 2em;
+  width: 8em;
+}
+.form-field > input:focus {
+  outline-color: lightskyblue;
+}
+
+label {
+  font-size: 1.1em;
+  padding-bottom: 0.3em;
+}
+
+.three-fields {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.three-fields .cvv {
+  line-height: 0.5em;
+  padding: 0;
+  width: 11.7em;
+}
+.three-fields input {
+  padding: 0.8em;
+  width: 8em;
+}
+.submit {
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1.1em;
+  background: #3e82e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2em;
+}
+
+.invalid-message {
+  float: right;
+  font-size: 0.8em;
+  color: red;
+}
+
+/*card animation*/
+
+.flip-card {
+  width: 100%;
+  /* background-color: transparent; */
+  /* width: 300px; */
+  /* height: 300px;
+  perspective: 1000px; */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+.flip-card.hovered .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back .holder-n-expires {
+  background-color: black;
+  top: -12em;
+  height: 50px;
+}
+.flip-card-back #card-number {
+  background: white;
+  width: 400px;
+  height: 50px;
+  border-radius: 5px;
+  right: 1.9em;
+}
+.flip-card-back .card-cvv {
+  position: absolute;
+  color: white;
+  right: 3.5em;
+  font-size: 1.5em;
+  top: -5em;
+}
+.flip-card-back #card-type-image {
+  top: -1em;
+}
+.flip-card-back .card-cvv-hidden {
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  font-size: 0.8em;
+}
